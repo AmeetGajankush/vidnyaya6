@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Resetting Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.HeaderLeft {
+  display: flex;
+  gap: 2rem;
+}
+
+.Emblem {
+  height: 80px;
+  width: 100%;
+}
+
+.Logo {
+  height: 80px;
+  width: 100%;
+}
+
+.HeaderRight {
+  display: flex;
+  gap: 2rem;
+}
+
+.Navlink {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Navicon {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 999px;
+  color: black;
+  background-color: #dbdbdb;
+}
+
+.Navtext {
+  color: black;
+  font-size: 1rem;
+}
+
+.SearchBar {
+  width: 85%;
+  margin: 1rem auto;
+  display: flex;
+}
+
+.ls {
+  border-right: none;
+}
+
+.Bar {
+  width: 20vw;
+  height: 40px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.SearchIcon {
+  font-size: 1rem;
+}
+
+.SearchBarInput {
+  width: 15vw;
+  border: none;
+  outline: none;
+  color: black;
+}
+.Tagline {
+  text-align: center;
+}
+.BannerContainer {
+  background-image: url(assets/Card/videoconsltbanner.png);
+  width: 85%;
+  height: 375px;
+  margin: 2rem auto;
+  display: flex;
+  padding: 0 2rem;
+  align-items: baseline;
+  gap: 1rem;
+}
+  
+  .BCLine {
+    background-color: rgb(41, 39, 39);
+    height: 250px;
+    width: 4px;
+  }
+  
+  .BannerTitle {
+    color: rgb(51, 76, 131);
+    font-size: 3rem;
+    text-shadow: 0 0 4px #ffffff, 0 0 5px #ffffff;
+    text-align: left;
+    margin: 2rem auto;
+  display: flex;
+  padding: 0 6rem;
+  align-items: center;
+  gap: 1rem;
+  }
+
+  .Consult{
+    margin: 0 0;
+  display: flex;
+  padding: 0 6rem;
+  align-items: center;
+  gap: 1rem;
+
+  }
+
+  /* Card Design  */
+.CardContainer {
+  width: 85%;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.FeaturedCard {
+  width: 250px;
+  aspect-ratio: 3/4;
+  color: black;
+  text-decoration: none;
+  border-radius: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  /* background: conic-gradient(from .5turn at bottom center, lightblue, white); */
+  background-color: #4d4d68;
+}
+
+.CardImage {
+  width: 85%;
+}
+
+.CardDesc {
+  background-color: rgb(192, 188, 188);
+  width: 100%;
+  border-radius: 1rem;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.CardTitle {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.CardDetails {
+  color: grey;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.Tagline2 {
+  width: 85%;
+  margin: 5rem auto;
+  display: flex;
+  font-size: 30px;
+  }
+
+/* Consult Container designs */
+.ConsultContainer {
+  width: 85%;
+  margin: 3rem auto;
+
+}
+
+.CCTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.CCDesc {
+  font-size: 0.9rem;
+}
+
+.ConsultCardContainer {
+  display: flex;
+  gap: 1.5rem;
+  margin: 3rem 0;
+  justify-content: space-between;
+}
+
+.FacilityCard {
+  width: 150px;
+  color: black;
+  text-decoration: none;
+  transition: 0.2s ease-in;
+  border-radius: 1rem;
+  
+}
+
+.FacilityCard:hover {
+  transform: scale(1.15);  
+}
+
+.CardImage2 {
+  width: 100%;
+}
+
+  .mid {
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    text-shadow: 0 0 4px #ffffff, 0 0 5px #ffffff;
+    font-weight: 600;
+    text-align: left;
+    margin: 2rem auto;
+  display: flex;
+  padding: 0 6rem;
+  align-items: center;
+  gap: 1rem;
+  }
+
+
+  .button-63 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 19px 24px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .button-63:active,
+  .button-63:hover {
+    outline: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .button-63 {
+      font-size: 24px;
+      min-width: 196px;
+    }
+  }

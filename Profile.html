@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawyers </title>
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .lawyer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .lawyer {
+            margin: 20px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .lawyer:hover {
+            transform: translateY(-5px);
+        }
+
+        .lawyer img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: -75px;
+        }
+
+        .lawyer-info {
+            padding: 20px;
+        }
+
+        .lawyer h2 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+        }
+
+        .lawyer p {
+            margin: 0;
+            color: #555;
+        }
+
+        /* Complaint Section Styles */
+        .complaint-section {
+            background-color: #333;
+            color: #fff;
+            padding: 40px;
+            width: 30%;
+            min-width: 300px;
+            float: right; /* Move it to the right side */
+        }
+
+        .complaint-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .complaint-form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .complaint-form label,
+        .complaint-form textarea,
+        .complaint-form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .complaint-form textarea {
+            height: 100px;
+        }
+
+        .complaint-form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Add styles for the confirmation message */
+        .confirmation-message {
+            display: none;
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+         <!-- Header -->
+  <header>
+    <div class="HeaderLeft">
+      <img src="assets/emblem.png" alt="Emblem" class="Emblem" />
+      <img src="assets/Logo.png" alt="Logo" class="Logo" />
+    </div>
+    <div class="HeaderRight">
+      <a href="/" class="Navlink">
+        <ion-icon name="chatbubble-ellipses-outline" class="Navicon"></ion-icon>
+        <p class="Navtext">Chats</p>
+      </a>
+      <a href="/" class="Navlink">
+        <ion-icon name="briefcase-outline" class="Navicon"></ion-icon>
+        <p class="Navtext">Services</p>
+      </a>
+      <a href="/" class="Navlink">
+        <ion-icon name="settings-outline" class="Navicon"></ion-icon>
+        <p class="Navtext">Settings</p>
+      </a>
+      <a href="/" class="Navlink">
+        <ion-icon name="log-in-outline" class="Navicon"></ion-icon>
+        <p class="Navtext">Login</p>
+      </a>
+    </div>
+  </header>
+
+  <form class="SearchBar">
+    <div class="ls Bar">
+      <ion-icon name="location-outline" class="SearchIcon"></ion-icon>
+      <input type="text" placeholder="Location" class="SearchBarInput" />
+    </div>
+    <div class="Bar">
+      <ion-icon name="search-outline" class="SearchIcon"></ion-icon>
+      <input type="text" placeholder="Search" class="SearchBarInput" />
+    </div>
+  </form>
+        <h1>Lawyers Request</h1>
+    </header>
+
+    <div class="lawyer-container">
+        <!-- Lawyer 1 -->
+        <div class="lawyer">
+            <img src="Images/lawyer1.jpg" alt="Lawyer 1">
+            <div class="lawyer-info">
+                <h2>Aman Sharma</h2>
+                <p>Specializes in Criminal Law</p>
+                <p>Contact: amansharma@gmail.com</p>
+                <p> Rating : 5+</p>
+ 
+                
+            </div>
+        </div>
+
+       
+
+    
+
+        <div class="complaint-section">
+            <h2>Request Pending </h2>
+            <form class="complaint-form" id="complaint-form">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="request">Request</label>
+                <textarea id="request" name="complaint" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <div class="confirmation-message" id="confirmation-message">
+                Your request has been submitted. Thank you!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for handling the form submission and displaying confirmation
+        document.addEventListener("DOMContentLoaded", function () {
+            const complaintForm = document.getElementById("complaint-form");
+            const confirmationMessage = document.getElementById("confirmation-message");
+
+            complaintForm.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Simulate form submission (you can replace this with an actual API call)
+                setTimeout(function () {
+                    // Clear the form fields
+                    complaintForm.reset();
+                    // Display the confirmation message
+                    confirmationMessage.style.display = "block";
+                }, 1000); // Simulate a delay for demonstration purposes
+            });
+        });
+    </script>
+</body>
+</html>
